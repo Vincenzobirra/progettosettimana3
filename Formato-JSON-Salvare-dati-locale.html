@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //**************************JSON JAVASCRIPT OBJECT NOTATION****************************
+        // è un formato di interscambio di dati tra applicazioni client-server
+        // i JSON hanno estenstione .json e supporta i dati primitivi e oggetti.
+        // var oggettoLetterale ={ proprietà1: 'valore', proprietà2: 'valore2', proprietà3='valore3'}
+        // proprietè separate da una virgola ad eccezione dell'ultima (proprietà3)
+        // in un oggetto JS possono esserci anche funzioni e valori complessi non in json.
+        // JSON ammette: stringhe, numeri, array, oggetti, booleani, null
+
+        //************SINTASSI JSON**************************************
+        { // le parentesi graffe racchiudono tutta la struttura del file json.
+            "home": "epicode.it", //coppia proprietà/valore
+            "link": "https://www.epicode.it", //JSON racchiude sempre nomi e valori tra "" a differenza di JS.
+            "aree": [{
+                "area": "CSS",
+                "area": "link/css" //per annidare gli oggetti si usa la quadra e poi la graffa interna per ogni oggetto.
+            }, {
+                "area": "HTML",
+                "area": "LINK/html"
+            }, ]
+        }
+
+        //Per accedere ad una proprietà di un json
+        oggetto.home //si accede a epicode.it (riga 23)
+        var aree = oggetto.aree; //ci estrae un array dal json con gli oggetti in aree (CSS,HTML) tramite for.
+        for (var i = 0, i < aree.lenght; i += 1) {
+            var oggettoarea = aree[i];
+            var area = oggettoarea.area;
+            var url = oggettoArea.url;
+        }
+        //chiamare un json con ajax
+        $.ajax({
+            url: 'json.php',
+            type: 'GET',
+            dataType: 'json',
+            success
+
+            function(oggetto) {
+                var sito = $(oggetto) //BOOOOOOOOOOO
+            }
+        })
+
+
+        //*******************WEB STORAGE API***************
+        // Sono un alternativa ai coockies
+        //impossibilià di utilizzare coockie diversi per le varie sessioni
+
+        //********* localStorage e sessionStorage
+        //localStorage---> storare dei dati e mantiene un comportamento su tutte le finestre del browser con lo stesso dominio.
+        // sessionStorage----> meccanismo di persistenza dei dati è legato alla sessione (se aggiorno la pagina resto in sessione se chiudo e riapro la scheda nuova sessione)
+        //entrambe possono ospitare piu dati rispetto ai coockies almeno 5mb
+        //localStorage e sessionStorage implementano la stessa interfaccia. Quindi hanno lo stesso set di metodi().
+        //Principali metodi: 
+        //localStorage.nome="vincenzo";
+        //localStorage.setItem('nome', 'federico'); setto qualcosa
+        //localStorage.getItem('nome'); chiamo la voce nome
+        //SI ESTRAGGONO E SALVANO SOLO STRINGHE QUINDI SI DEVE CONVERTIRE IL DATO ESTRATTO DAI LOCAL.
+        //se abbiamo localStorage.ordini= array("1","2","3"); ritorna "1,2,3" (stringa),
+        // serializzare su json
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="salvaRecupera.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>di qualcosa, ricordo tutto</h1>
+    <form name="formTesto">
+        <button type="button" id="btnSave" onclick="salvaDato(this.form.elements['campoTesto'].value);">Memorizza quanto scritto</button>
+        <button type="button" id="btnLoad" onclick="recuperaDato(this.form.elements['campoTesto']);">Recupera ultimo testo</button>
+        <textarea name="campoTesto " placeholder="Scrivi qualcosa da salvare "></textarea>
+    </form>
+
+
+
+</body>
+
+</html>

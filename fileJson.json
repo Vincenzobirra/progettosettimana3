@@ -1,0 +1,29 @@
+{
+    "discografia": [{
+            "titolo": "nomeAlbum1",
+            "anno": 1999,
+            "artista": "nomeArtista",
+            "canzoni": [{
+                "canzone1": "titolo1",
+                "canzone2": "titolo2",
+                "canzone3": "titolo3"
+            }]
+        },
+
+        {
+            "titolo": "nomeAlbum2",
+            "anno": 2000,
+            "artista": "coez",
+            "canzoni": [{
+                    "canzone1": "come nelle canzoni"
+                },
+                {
+                    "canzone2": "ali rotte"
+                },
+                {
+                    "canzone3": "jet"
+                }
+            ]
+        }
+    ]
+}
